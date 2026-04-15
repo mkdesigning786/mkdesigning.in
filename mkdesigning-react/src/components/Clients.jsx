@@ -15,6 +15,32 @@ function Clients() {
       name: 'Arjun Menon',
       role: 'CEO, Freshroots Organics',
     },
+    {
+      quote: 'MK Designing built our rental platform from scratch — property listings, booking system, and payment integration. The quality of work was outstanding for the price.',
+      name: 'Priya Sharma',
+      role: 'Co-founder, UrbanStay Rentals',
+    },
+    {
+      quote: 'They redesigned our salon website and it looks absolutely gorgeous. The appointment booking feature has saved us hours of phone calls every week.',
+      name: 'Meera Krishnan',
+      role: 'Owner, Velvet Salon & Spa',
+    },
+    {
+      quote: 'I took the React training course at MK Designing. The hands-on approach with real projects made all the difference. I landed my first developer job within 2 months!',
+      name: 'Arun Kumar',
+      role: 'Frontend Developer, Tech Startup',
+    },
+  ]
+
+  const clientLogos = [
+    { name: 'TrendBazaar', icon: 'fas fa-shopping-bag' },
+    { name: 'BrightPath', icon: 'fas fa-graduation-cap' },
+    { name: 'Freshroots', icon: 'fas fa-leaf' },
+    { name: 'UrbanStay', icon: 'fas fa-building' },
+    { name: 'Velvet Salon', icon: 'fas fa-spa' },
+    { name: 'KasimTech', icon: 'fas fa-microchip' },
+    { name: 'AutoDrive', icon: 'fas fa-car' },
+    { name: 'MediCare+', icon: 'fas fa-heartbeat' },
   ]
 
   return (
@@ -24,6 +50,16 @@ function Clients() {
         <h2 className="cp-heading cp-heading-center">
           Real Results, <span className="gradient-text">Real Feedback</span>
         </h2>
+
+        <div className="cp-client-logos">
+          {clientLogos.map((c, i) => (
+            <div className="cp-client-logo" key={i}>
+              <i className={c.icon}></i>
+              <span>{c.name}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="cp-testimonials">
           {testimonials.map((t, i) => (
             <div className="cp-testimonial-card" key={i}>

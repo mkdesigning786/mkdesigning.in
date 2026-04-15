@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom'
+
 function Footer() {
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+
   return (
     <footer className="cp-footer">
       <div className="cp-container">
         <div className="cp-footer-grid">
           <div className="cp-footer-col">
-            <img src="./logo.png" alt="MK Designing" className="cp-footer-logo" />
+            <img src="./logo.png" alt="MK Designing - Web Design & Development Agency in Vellore" className="cp-footer-logo" />
             <p>
               Professional web design &amp; development agency helping
               businesses build a strong online presence with custom websites,
@@ -15,22 +19,23 @@ function Footer() {
           <div className="cp-footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#why-us">Why Choose Us</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#clients">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/about" onClick={scrollTop}>About Us</Link></li>
+              <li><Link to="/services" onClick={scrollTop}>Services</Link></li>
+              <li><Link to="/portfolio" onClick={scrollTop}>Portfolio</Link></li>
+              <li><Link to="/pricing" onClick={scrollTop}>Pricing</Link></li>
+              <li><Link to="/team" onClick={scrollTop}>Our Team</Link></li>
+              <li><Link to="/contact" onClick={scrollTop}>Contact</Link></li>
             </ul>
           </div>
 
           <div className="cp-footer-col">
-            <h4>Services</h4>
+            <h4>Resources</h4>
             <ul>
-              <li><a href="#hero">Static Web Design</a></li>
-              <li><a href="#hero">Dynamic Websites</a></li>
-              <li><a href="#hero">E-Commerce Development</a></li>
-              <li><a href="#hero">Web Applications</a></li>
-              <li><a href="#hero">Website Redesign</a></li>
+              <li><Link to="/courses" onClick={scrollTop}>Training Courses</Link></li>
+              <li><Link to="/blog" onClick={scrollTop}>Blog &amp; Insights</Link></li>
+              <li><Link to="/testimonials" onClick={scrollTop}>Testimonials</Link></li>
+              <li><Link to="/faq" onClick={scrollTop}>FAQ</Link></li>
+              <li><Link to="/process" onClick={scrollTop}>How We Work</Link></li>
             </ul>
           </div>
 

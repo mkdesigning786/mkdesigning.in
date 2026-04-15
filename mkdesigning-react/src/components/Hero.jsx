@@ -26,20 +26,20 @@ function Hero() {
   }, [text, deleting, wordIndex])
 
   return (
-    <section className="cp-hero" id="hero">
+    <section className="cp-hero" id="hero" aria-label="MK Designing - Web Design and Development Agency">
       <div className="cp-hero-content">
         <div className="cp-hero-badge">
           <span className="cp-dot"></span>
-          Trusted Web Design &amp; Development Partner
+          Trusted Web Design &amp; Development Partner in Vellore
         </div>
         <h1 className="cp-hero-title">
-          We Create<br />
+          We Design &amp; Develop<br />
           <span className="gradient-text">{text}</span>
           <span className="cursor-blink">|</span>
         </h1>
         <p className="cp-hero-desc">
-          Transform your vision into a stunning digital reality. We design and
-          develop custom websites that drive traffic, engage visitors, and grow
+          Transform your vision into a stunning digital reality. MK Designing
+          creates custom websites that drive traffic, engage visitors, and grow
           your business — on time, on budget, and built to perform.
         </p>
 

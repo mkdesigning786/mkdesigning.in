@@ -6,27 +6,25 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
   const links = [
-    { to: '/', hash: '#hero', label: 'Home' },
-    { to: '/', hash: '#about', label: 'About' },
-    { to: '/', hash: '#why-us', label: 'Why Us' },
-    { to: '/', hash: '#courses', label: 'Courses' },
-    { to: '/', hash: '#clients', label: 'Clients' },
-    { to: '/', hash: '#contact', label: 'Contact' },
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/services', label: 'Services' },
+    { to: '/portfolio', label: 'Portfolio' },
+    { to: '/courses', label: 'Courses' },
+    { to: '/blog', label: 'Blog' },
+    { to: '/contact', label: 'Contact' },
   ]
 
-  const handleNav = (hash) => {
+  const handleNav = () => {
     setOpen(false)
-    if (hash && location.pathname === '/') {
-      const el = document.querySelector(hash)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     <nav className="cp-nav">
       <div className="cp-nav-inner">
-        <Link to="/" className="cp-nav-logo" onClick={() => setOpen(false)}>
-          <img src="./logo.png" alt="MK Designing" />
+        <Link to="/" className="cp-nav-logo" onClick={() => { setOpen(false); window.scrollTo({ top: 0 }) }}>
+          <img src="./logo.png" alt="MK Designing - Professional Web Design Company" />
           <span className="cp-nav-brand">
             mk<strong>designing</strong>
           </span>
@@ -39,23 +37,13 @@ function Navbar() {
         <ul className={`cp-nav-links ${open ? 'open' : ''}`}>
           {links.map((l) => (
             <li key={l.label}>
-              {l.hash ? (
-                <Link
-                  to={l.to}
-                  onClick={() => handleNav(l.hash)}
-                  className={location.hash === l.hash ? 'active' : ''}
-                >
-                  {l.label}
-                </Link>
-              ) : (
-                <Link
-                  to={l.to}
-                  className={location.pathname === l.to && !l.hash ? 'active' : ''}
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </Link>
-              )}
+              <Link
+                to={l.to}
+                onClick={handleNav}
+                className={location.pathname === l.to ? 'active' : ''}
+              >
+                {l.label}
+              </Link>
             </li>
           ))}
         </ul>

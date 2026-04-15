@@ -5,7 +5,7 @@ function About() {
         <div className="cp-section-label">Who We Are</div>
         <div className="cp-about-grid">
           <div className="cp-about-img">
-            <img src="./logo.png" alt="MK Designing" />
+            <img src="./logo.png" alt="MK Designing - Web Design & Development Agency Logo, Vellore Tamil Nadu" />
           </div>
           <div className="cp-about-text">
             <h2 className="cp-heading">
