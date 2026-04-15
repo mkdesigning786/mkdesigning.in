@@ -9,6 +9,7 @@ function Navbar() {
     { to: '/', hash: '#hero', label: 'Home' },
     { to: '/', hash: '#about', label: 'About' },
     { to: '/', hash: '#why-us', label: 'Why Us' },
+    { to: '/', hash: '#courses', label: 'Courses' },
     { to: '/', hash: '#clients', label: 'Clients' },
     { to: '/', hash: '#contact', label: 'Contact' },
   ]
@@ -25,9 +26,9 @@ function Navbar() {
     <nav className="cp-nav">
       <div className="cp-nav-inner">
         <Link to="/" className="cp-nav-logo" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="MK Designing" />
+          <img src="./logo.png" alt="MK Designing" />
           <span className="cp-nav-brand">
-            MK<strong>Designing</strong>
+            mk<strong>designing</strong>
           </span>
         </Link>
 

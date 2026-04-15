@@ -4,7 +4,7 @@ function Footer() {
       <div className="cp-container">
         <div className="cp-footer-grid">
           <div className="cp-footer-col">
-            <img src="/logo.png" alt="MK Designing" className="cp-footer-logo" />
+            <img src="./logo.png" alt="MK Designing" className="cp-footer-logo" />
             <p>
               Professional web design &amp; development agency helping
               businesses build a strong online presence with custom websites,
@@ -17,6 +17,7 @@ function Footer() {
             <ul>
               <li><a href="#about">About Us</a></li>
               <li><a href="#why-us">Why Choose Us</a></li>
+              <li><a href="#courses">Courses</a></li>
               <li><a href="#clients">Testimonials</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
