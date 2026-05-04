@@ -3,8 +3,6 @@ import About from '../components/About'
 import Services from '../components/Services'
 import WhyUs from '../components/WhyUs'
 import Process from '../components/Process'
-import Portfolio from '../components/Portfolio'
-import Pricing from '../components/Pricing'
 import Courses from '../components/Courses'
 import Team from '../components/Team'
 import Clients from '../components/Clients'
@@ -25,8 +23,6 @@ function Home() {
       <Services />
       <WhyUs />
       <Process />
-      <Portfolio />
-      <Pricing />
       <Courses />
       <Team />
       <Clients />

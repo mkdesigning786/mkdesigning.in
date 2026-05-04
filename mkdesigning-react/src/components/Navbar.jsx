@@ -9,7 +9,6 @@ function Navbar() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
-    { to: '/portfolio', label: 'Portfolio' },
     { to: '/courses', label: 'Courses' },
     { to: '/blog', label: 'Blog' },
     { to: '/contact', label: 'Contact' },
