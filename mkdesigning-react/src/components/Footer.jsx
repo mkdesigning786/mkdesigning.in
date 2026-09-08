@@ -32,8 +32,6 @@ function Footer() {
             <h4>Resources</h4>
             <ul>
               <li><Link to="/courses" onClick={scrollTop}>Training Courses</Link></li>
-              <li><Link to="/blog" onClick={scrollTop}>Blog &amp; Insights</Link></li>
-              <li><Link to="/testimonials" onClick={scrollTop}>Testimonials</Link></li>
               <li><Link to="/faq" onClick={scrollTop}>FAQ</Link></li>
               <li><Link to="/process" onClick={scrollTop}>How We Work</Link></li>
             </ul>

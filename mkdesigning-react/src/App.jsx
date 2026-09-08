@@ -8,8 +8,6 @@ import ServicesPage from './pages/ServicesPage'
 import TeamPage from './pages/TeamPage'
 import ContactPage from './pages/ContactPage'
 import CoursesPage from './pages/CoursesPage'
-import BlogPage from './pages/BlogPage'
-import TestimonialsPage from './pages/TestimonialsPage'
 import FAQPage from './pages/FAQPage'
 import ProcessPage from './pages/ProcessPage'
 
@@ -25,8 +23,6 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/courses" element={<CoursesPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/process" element={<ProcessPage />} />
       </Routes>

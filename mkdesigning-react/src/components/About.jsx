@@ -4,18 +4,31 @@ function About() {
       <div className="cp-container">
         <div className="cp-section-label">Who We Are</div>
         <div className="cp-about-grid">
-          <div className="cp-about-img">
-            <img src="./logo.png" alt="MK Designing - Web Design & Development Agency Logo, Vellore Tamil Nadu" />
+          <div className="cp-about-visual">
+            <div className="cp-about-img">
+              <span className="cp-about-corner cp-about-corner-top"></span>
+              <img src="./logo.png" alt="MK Designing - Web Design & Development Agency Logo, Vellore Tamil Nadu" />
+              <span className="cp-about-corner cp-about-corner-bottom"></span>
+            </div>
+            <div className="cp-about-location">
+              <span className="cp-about-location-dot"></span>
+              <span>Vellore, Tamil Nadu</span>
+              <span className="cp-about-location-line"></span>
+              <span>Est. 2020</span>
+            </div>
           </div>
           <div className="cp-about-text">
             <h2 className="cp-heading">
               Your Digital Growth Starts with <span className="gradient-text">Great Design</span>
             </h2>
+            <p className="cp-about-lead">
+              We turn ambitious ideas into clear, confident digital experiences.
+            </p>
             <p>
               MK Designing is a professional web design and development agency
               based in Vellore, Tamil Nadu. Founded by Mohammed Kasim, we help
               businesses — from startups to established brands — build a
-              compelling online presence that converts visitors into customers.
+              compelling online presence that helps customers connect with your business.
             </p>
             <p>
               Our expertise spans static business websites, content-driven
@@ -35,7 +48,7 @@ function About() {
               </div>
               <div className="cp-highlight">
                 <i className="fas fa-check-circle"></i>
-                <span>SEO &amp; Performance Optimized</span>
+                <span>Fast &amp; Performance Optimized</span>
               </div>
               <div className="cp-highlight">
                 <i className="fas fa-check-circle"></i>
@@ -50,9 +63,12 @@ function About() {
                 <span>Transparent Communication</span>
               </div>
             </div>
-            <a href="#contact" className="cp-btn cp-btn-primary" style={{ marginTop: '25px' }}>
-              Let&apos;s Discuss Your Project
-            </a>
+            <div className="cp-about-footer">
+              <a href="#contact" className="cp-btn cp-btn-primary">
+                Let&apos;s Discuss Your Project
+              </a>
+              <span className="cp-about-signoff">Thoughtful design. Measurable growth.</span>
+            </div>
           </div>
         </div>
       </div>

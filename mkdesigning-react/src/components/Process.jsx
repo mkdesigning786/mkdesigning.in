@@ -15,7 +15,7 @@ function Process() {
     {
       num: '03',
       title: 'Development',
-      desc: 'We build your website using modern technologies with clean, semantic code. Mobile responsiveness, performance, and SEO are baked in from the start.',
+      desc: 'We build your website using modern technologies with clean, semantic code. Mobile responsiveness, performance, and accessibility are part of the foundation.',
       icon: 'fas fa-code',
     },
     {
@@ -27,7 +27,7 @@ function Process() {
     {
       num: '05',
       title: 'Launch & Deployment',
-      desc: 'We deploy your website to production, set up SSL, configure DNS, and ensure everything runs smoothly. We also set up Google Analytics and Search Console.',
+      desc: 'We deploy your website to production, set up SSL, configure DNS, and ensure everything runs smoothly across your chosen devices and browsers.',
       icon: 'fas fa-rocket',
     },
     {

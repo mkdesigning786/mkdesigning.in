@@ -3,8 +3,8 @@ function Services() {
     {
       icon: 'fas fa-laptop-code',
       title: 'Static Website Design',
-      desc: 'Professional, fast-loading static websites perfect for portfolios, landing pages, and small businesses. Built with clean HTML, CSS, and JavaScript for maximum speed and SEO performance.',
-      features: ['Lightning-fast page loads', 'Mobile responsive design', 'SEO optimized structure', 'Easy to host & maintain'],
+      desc: 'Professional, fast-loading static websites perfect for portfolios, landing pages, and small businesses. Built with clean HTML, CSS, and JavaScript for reliable performance.',
+      features: ['Lightning-fast page loads', 'Mobile responsive design', 'Well-structured code', 'Easy to host & maintain'],
     },
     {
       icon: 'fas fa-code',
@@ -28,13 +28,7 @@ function Services() {
       icon: 'fas fa-sync-alt',
       title: 'Website Redesign',
       desc: 'Transform your outdated website into a modern, high-performing digital asset. We preserve your brand while upgrading design, speed, and user experience.',
-      features: ['Modern UI/UX overhaul', 'Performance optimization', 'Mobile-first approach', 'SEO migration'],
-    },
-    {
-      icon: 'fas fa-search',
-      title: 'SEO & Digital Marketing',
-      desc: 'Search engine optimization, Google Analytics setup, and digital marketing strategies to increase your online visibility and drive organic traffic to your website.',
-      features: ['On-page SEO', 'Google Analytics & Search Console', 'Speed optimization', 'Content strategy'],
+      features: ['Modern UI/UX overhaul', 'Performance optimization', 'Mobile-first approach', 'Content migration'],
     },
   ]
 

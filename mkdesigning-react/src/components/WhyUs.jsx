@@ -8,12 +8,7 @@ function WhyUs() {
     {
       icon: 'fas fa-mobile-alt',
       title: 'Mobile-First & Responsive',
-      desc: 'Over 60% of web traffic is mobile. We build responsive sites that look flawless on phones, tablets, and desktops.',
-    },
-    {
-      icon: 'fas fa-search',
-      title: 'SEO Built-In from Day One',
-      desc: 'Clean code, fast page speeds, and proper meta structure so your website ranks higher on Google from launch.',
+      desc: 'We build responsive sites that look flawless on phones, tablets, and desktops.',
     },
     {
       icon: 'fas fa-bolt',

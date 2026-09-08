@@ -39,7 +39,7 @@ function Hero() {
         </h1>
         <p className="cp-hero-desc">
           Transform your vision into a stunning digital reality. MK Designing
-          creates custom websites that drive traffic, engage visitors, and grow
+          creates custom websites that communicate your value, engage visitors, and grow
           your business — on time, on budget, and built to perform.
         </p>
 
@@ -66,24 +66,6 @@ function Hero() {
           </div>
         </div>
 
-        <div className="cp-hero-stats">
-          <div className="cp-stat">
-            <span className="cp-stat-num">50+</span>
-            <span className="cp-stat-label">Projects Delivered</span>
-          </div>
-          <div className="cp-stat">
-            <span className="cp-stat-num">5+</span>
-            <span className="cp-stat-label">Years of Experience</span>
-          </div>
-          <div className="cp-stat">
-            <span className="cp-stat-num">98%</span>
-            <span className="cp-stat-label">Client Retention</span>
-          </div>
-          <div className="cp-stat">
-            <span className="cp-stat-num">30+</span>
-            <span className="cp-stat-label">Active Clients</span>
-          </div>
-        </div>
         <div className="cp-hero-actions">
           <a href="#contact" className="cp-btn cp-btn-primary">Get Free Consultation</a>
           <a href="#about" className="cp-btn cp-btn-outline">Explore Our Work</a>
