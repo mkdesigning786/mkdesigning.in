@@ -7,10 +7,7 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   base: './',
   build: {
-    outDir: 'C:/my data/mk-build',
+    outDir: 'mk-build',
     emptyOutDir: true,
-  },
-  preview: {
-    outDir: 'C:/my data/mk-build',
   },
 })
