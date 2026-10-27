@@ -50,15 +50,6 @@ jobs:
           }
           echo "Build output verified"
 
-      - name: Diagnose FTP connection
-        working-directory: .
-        continue-on-error: true
-        run: |
-          echo "Checking FTP hostname..."
-          getent ahosts ftp.mkdesigning.in
-          echo "Checking FTP control port 21..."
-          timeout 10 nc -vz ftp.mkdesigning.in 21
-
       - name: Deploy build to cPanel over FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
