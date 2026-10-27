@@ -46,7 +46,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.mkdesigning.in
-          username: ${{ secrets.CPANEL_FTP_USERNAME }}
+          username: mkdesig1
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           protocol: ftps
           port: 21
