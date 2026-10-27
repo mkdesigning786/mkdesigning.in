@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function Footer() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -8,7 +9,7 @@ function Footer() {
       <div className="cp-container">
         <div className="cp-footer-grid">
           <div className="cp-footer-col">
-            <img src="./logo.png" alt="MK Designing - Web Design & Development Agency in Vellore" className="cp-footer-logo" />
+            <img src={logo} alt="MK Designing - Web Design & Development Agency in Vellore" className="cp-footer-logo" />
             <p>
               Professional web design &amp; development agency helping
               businesses build a strong online presence with custom websites,

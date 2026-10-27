@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   const location = useLocation()
@@ -22,7 +23,7 @@ function Navbar() {
     <nav className="cp-nav">
       <div className="cp-nav-inner">
         <Link to="/" className="cp-nav-logo" onClick={() => { setOpen(false); window.scrollTo({ top: 0 }) }}>
-          <img src="./logo.png" alt="MK Designing - Professional Web Design Company" />
+          <img src={logo} alt="MK Designing - Professional Web Design Company" />
           <span className="cp-nav-brand">
             mk<strong>designing</strong>
           </span>

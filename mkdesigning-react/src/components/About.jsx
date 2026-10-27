@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 function About() {
   return (
     <section className="cp-section" id="about">
@@ -7,7 +9,7 @@ function About() {
           <div className="cp-about-visual">
             <div className="cp-about-img">
               <span className="cp-about-corner cp-about-corner-top"></span>
-              <img src="./logo.png" alt="MK Designing - Web Design & Development Agency Logo, Vellore Tamil Nadu" />
+              <img src={logo} alt="MK Designing - Web Design & Development Agency Logo, Vellore Tamil Nadu" />
               <span className="cp-about-corner cp-about-corner-bottom"></span>
             </div>
             <div className="cp-about-location">
