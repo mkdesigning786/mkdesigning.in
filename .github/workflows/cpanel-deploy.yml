@@ -1,3 +1,4 @@
+
 name: Deploy to cPanel
 
 on:
@@ -9,12 +10,21 @@ on:
       - ".github/workflows/cpanel-deploy.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: cpanel-production-deploy
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: mkdesigning-react
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -31,6 +41,10 @@ jobs:
 
       - name: Build site
         run: npm run build
+
+      - name: Verify build output
+        run: |
+          test -s mk-build/index.html
 
       - name: Deploy build to cPanel over FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
