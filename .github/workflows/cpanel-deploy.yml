@@ -19,9 +19,12 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     defaults:
       run:
         working-directory: mkdesigning-react
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -41,16 +44,23 @@ jobs:
 
       - name: Verify build output
         run: |
-          if [ -f mk-build/index.html ]; then
-            echo "Build output confirmed at mk-build/index.html"
-          else
-            echo "Build output missing at mk-build/index.html"
+          test -s mk-build/index.html || {
+            echo "Build output missing or empty"
             exit 1
-          fi
+          }
+          echo "Build output verified"
+
+      - name: Diagnose FTP connection
+        working-directory: .
+        continue-on-error: true
+        run: |
+          echo "Checking FTP hostname..."
+          getent ahosts ftp.mkdesigning.in
+          echo "Checking FTP control port 21..."
+          timeout 10 nc -vz ftp.mkdesigning.in 21
 
       - name: Deploy build to cPanel over FTPS
-        if: true
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ftp.mkdesigning.in
           username: mkdesig1
@@ -59,9 +69,5 @@ jobs:
           port: 21
           local-dir: mkdesigning-react/mk-build/
           server-dir: /home2/mkdesig1/public_html/
-          timeout: 60000
+          timeout: 120000
           log-level: verbose
-
-      #- name: Skip deployment if cPanel secrets are missing
-      #  if: ${{ secrets.CPANEL_FTP_USERNAME == '' || secrets.CPANEL_FTP_PASSWORD == '' || secrets.CPANEL_SERVER_DIR == '' }}
-      #  run: echo "Skipping deployment because cPanel secrets are not configured in GitHub repository settings."
