@@ -54,7 +54,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ftp.mkdesigning.in
-          username: mkdesig1
+          username: mkdesig12@mkdesigning.in
           password: Mkdesigning.in
           protocol: ftps
           port: 21
