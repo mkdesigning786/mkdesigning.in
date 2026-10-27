@@ -47,10 +47,10 @@ jobs:
         with:
           server: ftp.mkdesigning.in
           username: mkdesig1
-          password: Mkdesigning.in
+          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           protocol: ftps
           port: 21
           local-dir: mkdesigning-react/mk-build/
           server-dir: ${{ secrets.CPANEL_SERVER_DIR }}
           timeout: 60000
-          log-level: standard
+          log-level: verbose
