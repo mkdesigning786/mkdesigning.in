@@ -49,19 +49,19 @@ jobs:
           fi
 
       - name: Deploy build to cPanel over FTPS
-        if: ${{ secrets.CPANEL_FTP_USERNAME != '' && secrets.CPANEL_FTP_PASSWORD != '' && secrets.CPANEL_SERVER_DIR != '' }}
+        if: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.mkdesigning.in
-          username: ${{ secrets.CPANEL_FTP_USERNAME }}
-          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          username: mkdesig1
+          password: Mkdesigning.in
           protocol: ftps
           port: 21
           local-dir: mkdesigning-react/mk-build/
-          server-dir: /public_html
+          server-dir: /home2/mkdesig1/public_html
           timeout: 60000
           log-level: verbose
 
-      - name: Skip deployment if cPanel secrets are missing
-        if: ${{ secrets.CPANEL_FTP_USERNAME == '' || secrets.CPANEL_FTP_PASSWORD == '' || secrets.CPANEL_SERVER_DIR == '' }}
-        run: echo "Skipping deployment because cPanel secrets are not configured in GitHub repository settings."
+      #- name: Skip deployment if cPanel secrets are missing
+      #  if: ${{ secrets.CPANEL_FTP_USERNAME == '' || secrets.CPANEL_FTP_PASSWORD == '' || secrets.CPANEL_SERVER_DIR == '' }}
+      #  run: echo "Skipping deployment because cPanel secrets are not configured in GitHub repository settings."
