@@ -51,6 +51,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: mkdesigning-react/mk-build/
-          server-dir: ${{ secrets.CPANEL_SERVER_DIR }}
+          server-dir: /public_html
           timeout: 60000
           log-level: verbose
