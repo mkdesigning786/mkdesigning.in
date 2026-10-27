@@ -53,9 +53,9 @@ jobs:
       - name: Deploy build to cPanel over FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ftp.mkdesigning.in
-          username: mkdesig12@mkdesigning.in
-          password: Mkdesigning.in
+          server: ${{ secrets.CPANEL_FTP_SERVER }}
+          username: ${{ secrets.CPANEL_FTP_USERNAME }}
+          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
           protocol: ftps
           port: 21
           local-dir: mkdesigning-react/mk-build/
